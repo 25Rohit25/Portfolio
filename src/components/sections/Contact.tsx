@@ -46,9 +46,9 @@ export function Contact() {
 
                     {/* Contact Info */}
                     <div>
-                        <h2 className="text-4xl font-bold mb-6">Let's Connect</h2>
+                        <h2 className="text-4xl font-bold mb-6">Let&apos;s Connect</h2>
                         <p className="text-muted-foreground mb-8 text-lg">
-                            I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                            I&apos;m currently looking for new opportunities. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
                         </p>
 
                         <div className="space-y-6">
@@ -122,7 +122,7 @@ export function Contact() {
                                             <CheckCircle2 className="w-8 h-8" />
                                         </div>
                                         <h3 className="text-xl font-bold mb-2">Message Sent!</h3>
-                                        <p className="text-muted-foreground mb-6">Thanks for reaching out. I'll get back to you soon.</p>
+                                        <p className="text-muted-foreground mb-6">Thanks for reaching out. I&apos;ll get back to you soon.</p>
                                         <Button variant="outline" onClick={() => setIsSuccess(false)}>Send Another</Button>
                                     </motion.div>
                                 )}

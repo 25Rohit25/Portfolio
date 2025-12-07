@@ -1,8 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Briefcase, Calendar } from "lucide-react"
+import { Calendar } from "lucide-react"
 import Image from "next/image"
+
+
 
 const experience = [
     {
@@ -88,10 +90,8 @@ export function Experience() {
                                         ))}
                                     </ul>
 
-                                    {/* @ts-ignore */}
                                     {item.image && (
                                         <div className="mt-4 relative h-40 w-full md:w-64 rounded-lg overflow-hidden border border-border/50">
-                                            {/* @ts-ignore */}
                                             <Image
                                                 src={item.image}
                                                 alt={item.role}

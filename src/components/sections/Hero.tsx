@@ -4,10 +4,8 @@ import Image from "next/image"
 
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { ArrowRight, Download, Github, Linkedin, Mail, Code2, Terminal } from "lucide-react"
-// Note: Code2/Terminal as placeholders for LeetCode/Codeforces if separate icons aren't available easily without react-icons
-import { FaGithub, FaLinkedin, FaCodepen, FaHackerrank } from "react-icons/fa" // Wait, I installed react-icons
-import { SiLeetcode, SiCodeforces, SiGeeksforgeeks } from "react-icons/si"
+import { ArrowRight, Download, Mail } from "lucide-react"
+import { FaGithub, FaLinkedin } from "react-icons/fa"
 
 import { Button } from "@/components/ui/button"
 
@@ -47,7 +45,7 @@ export function Hero() {
                         Available for new opportunities
                     </div>
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
-                        Hi, I'm <span className="text-gradient">Rohit Singh</span>
+                        Hi, I&apos;m <span className="text-gradient">Rohit Singh</span>
                     </h1>
                     <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-6 h-8 md:h-12">
                         {text}
