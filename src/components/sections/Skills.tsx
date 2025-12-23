@@ -6,45 +6,45 @@ import { Monitor, Server, Cloud, Terminal, Database, Code } from "lucide-react"
 const skillsData = [
     {
         category: "Languages",
-        icon: <Code className="w-8 h-8 text-blue-500" />,
+        icon: <Code className="w-8 h-8 text-primary" />,
         skills: ["C++", "JavaScript", "TypeScript", "Python", "Java", "SQL"],
-        className: "border-blue-500/20 hover:border-blue-500/50"
+        className: "border-border hover:border-primary/50"
     },
     {
         category: "Backend Development",
-        icon: <Server className="w-8 h-8 text-green-500" />,
+        icon: <Server className="w-8 h-8 text-primary" />,
         skills: ["Node.js", "Express.js", "Spring Boot", "REST APIs", "WebSockets", "JWT", "RBAC"],
-        className: "border-green-500/20 hover:border-green-500/50"
+        className: "border-border hover:border-primary/50"
     },
     {
         category: "Cloud Services",
-        icon: <Cloud className="w-8 h-8 text-orange-500" />,
+        icon: <Cloud className="w-8 h-8 text-primary" />,
         skills: ["AWS EC2", "AWS S3", "AWS IAM", "AWS ALB", "Vercel", "Render"],
-        className: "border-orange-500/20 hover:border-orange-500/50"
+        className: "border-border hover:border-primary/50"
     },
     {
         category: "DevOps & Containers",
-        icon: <Terminal className="w-8 h-8 text-purple-500" />,
+        icon: <Terminal className="w-8 h-8 text-primary" />,
         skills: ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Ansible", "Linux"],
-        className: "border-purple-500/20 hover:border-purple-500/50"
+        className: "border-border hover:border-primary/50"
     },
     {
         category: "Databases",
-        icon: <Database className="w-8 h-8 text-cyan-500" />,
+        icon: <Database className="w-8 h-8 text-primary" />,
         skills: ["MySQL", "PostgreSQL", "MongoDB"],
-        className: "border-cyan-500/20 hover:border-cyan-500/50"
+        className: "border-border hover:border-primary/50"
     },
     {
         category: "Distributed Systems",
-        icon: <Monitor className="w-8 h-8 text-red-500" />,
+        icon: <Monitor className="w-8 h-8 text-primary" />,
         skills: ["Consistency Models", "Caching", "Load Balancing", "Microservices", "Observability"],
-        className: "border-red-500/20 hover:border-red-500/50"
+        className: "border-border hover:border-primary/50"
     }
 ]
 
 export function Skills() {
     return (
-        <section id="skills" className="py-20 bg-muted/30">
+        <section id="skills" className="py-20 bg-background">
             <div className="container px-4 md:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export function Skills() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
-                            className={`p-6 rounded-xl border bg-card/50 backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${category.className}`}
+                            className={`p-6 rounded-xl border bg-card backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${category.className}`}
                         >
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="p-3 rounded-lg bg-background shadow-md">
@@ -94,7 +94,7 @@ export function Skills() {
                     viewport={{ once: true }}
                     className="mt-12 text-center"
                 >
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-purple-500/10 border border-primary/20">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-primary/20">
                         <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                         <span className="text-sm font-medium"> Currently Learning: Advanced System Design, Kubernetes, Microservices</span>
                     </div>

@@ -10,7 +10,7 @@ export function BlogOverview() {
     const recentPosts = blogPosts.slice(0, 3)
 
     return (
-        <section id="blog" className="py-20 bg-muted/20">
+        <section id="blog" className="py-20">
             <div className="container px-4 md:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,7 @@ function BlogCard({ post, index }: { post: BlogPost; index: number }) {
             </div>
 
             {/* Decorative bottom bar */}
-            <div className="h-1 w-full bg-gradient-to-r from-transparent via-primary/50 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+            <div className="h-1 w-full bg-primary/50 scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
         </motion.div>
     )
 }

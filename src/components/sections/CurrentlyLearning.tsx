@@ -7,22 +7,22 @@ export function CurrentlyLearning() {
     return (
         <section className="py-20 px-4 md:px-6 container">
             <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-violet-600/10 to-indigo-600/10 rounded-2xl p-8 md:p-12 border border-violet-500/20 backdrop-blur-sm"
+                className="bg-muted/10 rounded-xl p-8 md:p-12 border border-border backdrop-blur-sm"
             >
-                <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
+                <h2 className="text-2xl font-bold mb-8 flex items-center gap-2 text-foreground">
                     <span className="relative flex h-3 w-3">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
                     </span>
                     Right Now I&apos;m...
                 </h2>
 
                 <div className="grid md:grid-cols-3 gap-8">
                     <div className="space-y-3">
-                        <div className="flex items-center gap-2 text-violet-500 font-semibold">
+                        <div className="flex items-center gap-2 text-primary font-semibold">
                             <Hammer className="w-5 h-5" /> Building
                         </div>
                         <p className="text-muted-foreground">
@@ -31,7 +31,7 @@ export function CurrentlyLearning() {
                     </div>
 
                     <div className="space-y-3">
-                        <div className="flex items-center gap-2 text-blue-500 font-semibold">
+                        <div className="flex items-center gap-2 text-primary font-semibold">
                             <BookOpen className="w-5 h-5" /> Learning
                         </div>
                         <p className="text-muted-foreground">
@@ -40,7 +40,7 @@ export function CurrentlyLearning() {
                     </div>
 
                     <div className="space-y-3">
-                        <div className="flex items-center gap-2 text-pink-500 font-semibold">
+                        <div className="flex items-center gap-2 text-primary font-semibold">
                             <Target className="w-5 h-5" /> Practicing
                         </div>
                         <p className="text-muted-foreground">

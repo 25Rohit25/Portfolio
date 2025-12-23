@@ -40,7 +40,7 @@ export function Navbar() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex-shrink-0">
-                        <Link href="/" className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+                        <Link href="/" className="text-xl font-bold text-foreground">
                             Rohit Singh
                         </Link>
                     </div>

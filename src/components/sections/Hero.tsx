@@ -25,13 +25,8 @@ export function Hero() {
     }, [index])
 
     return (
-        <section id="home" className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden pt-16">
-            {/* Background Elements */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob" />
-                <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-blue-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000" />
-                <div className="absolute -bottom-8 left-1/3 w-72 h-72 bg-pink-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
-            </div>
+        <section id="home" className="relative min-h-[100dvh] flex items-center justify-center pt-16 bg-background">
+            {/* Background Elements removed for clean look */}
 
             <div className="container px-4 md:px-6 relative z-10 flex flex-col md:flex-row items-center gap-12">
                 {/* Text Content */}
@@ -41,35 +36,34 @@ export function Hero() {
                     transition={{ duration: 0.8 }}
                     className="flex-1 text-center md:text-left"
                 >
-                    <div className="inline-block mb-4 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium backdrop-blur-sm">
+                    <div className="inline-block mb-4 px-3 py-1 rounded-full border border-primary/20 bg-primary/5 text-primary text-sm font-medium">
                         Available for new opportunities
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4">
-                        Hi, I&apos;m <span className="text-gradient">Rohit Singh</span>
+                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 text-foreground">
+                        Hi, I&apos;m <span className="text-primary">Rohit Singh</span>
                     </h1>
                     <h2 className="text-2xl md:text-3xl font-semibold text-muted-foreground mb-6 h-8 md:h-12">
                         {text}
-                        <span className="animate-pulse">|</span>
+                        <span className="animate-pulse text-primary">|</span>
                     </h2>
-                    <p className="text-lg text-muted-foreground max-w-lg mx-auto md:mx-0 mb-8">
+                    <p className="text-lg text-muted-foreground max-w-lg mx-auto md:mx-0 mb-8 leading-relaxed">
                         I build scalable, cloud-native systems with distributed backend architectures and automated deployments.
                     </p>
 
                     <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
-
-                        <Button size="lg" className="rounded-full group" asChild>
+                        <Button size="lg" className="rounded-md group bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm" asChild>
                             <a href="#projects">
                                 View My Projects
                                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                             </a>
                         </Button>
-                        <Button size="lg" variant="outline" className="rounded-full" asChild>
-                            <a href="/resume.pdf" download>
+                        <Button size="lg" variant="outline" className="rounded-md border-border hover:bg-secondary/50" asChild>
+                            <a href="/Rohit_singh_cm.pdf" download="Rohit_singh_cm.pdf">
                                 Download Resume
                                 <Download className="ml-2 h-4 w-4" />
                             </a>
                         </Button>
-                        <Button size="lg" variant="secondary" className="rounded-full" asChild>
+                        <Button size="lg" variant="ghost" className="rounded-md hover:bg-secondary/50" asChild>
                             <a href="#contact">
                                 Contact Me
                                 <Mail className="ml-2 h-4 w-4" />
@@ -88,15 +82,15 @@ export function Hero() {
 
                 {/* Hero Image */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     className="flex-1 relative"
                 >
-
                     <div className="relative w-72 h-72 md:w-96 md:h-96 mx-auto">
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-purple-600 blur-2xl opacity-50 animate-pulse" />
-                        <div className="absolute inset-2 rounded-full bg-background border-4 border-background overflow-hidden shadow-2xl z-10">
+                        {/* Clean border instead of glow */}
+                        <div className="absolute inset-0 rounded-full border border-border bg-muted/20" />
+                        <div className="absolute inset-4 rounded-full overflow-hidden border border-border shadow-2xl z-10">
                             <Image
                                 src="/profile.jpg"
                                 alt="Rohit Singh"

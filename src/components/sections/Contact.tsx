@@ -76,7 +76,7 @@ export function Contact() {
 
                     {/* Form */}
                     <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-primary to-purple-600 rounded-2xl blur-xl opacity-20 transform -rotate-1" />
+                        <div className="absolute inset-0 bg-primary/5 rounded-2xl transform -rotate-1" />
                         <div className="relative bg-card border border-border/50 p-8 rounded-2xl shadow-xl">
                             <AnimatePresence mode="wait">
                                 {!isSuccess ? (
