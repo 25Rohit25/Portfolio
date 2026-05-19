@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MouseFollower } from "@/components/ui/mouse-follower";
 
-const inter = Inter({ subsets: ["latin"] });
+const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
+const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-geist-mono" });
 
 export const metadata: Metadata = {
-  title: "Rohit Singh | Full Stack Cloud Engineer",
-  description: "Portfolio of Rohit Singh - Full Stack Engineer & Cloud Enthusiast. Building scalable web applications.",
+  title: "Rohit Singh | Software Engineer & Backend Developer",
+  description: "Portfolio of Rohit Singh — CS student at KL University. Backend Engineer, Distributed Systems, AI-powered apps. Codeforces Expert · CodeChef 5★ · LeetCode Knight.",
 };
 
 export default function RootLayout({
@@ -20,12 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased selection:bg-primary/20 selection:text-primary`}>
+      <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased selection:bg-primary/20 selection:text-primary`}>
 
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem={true}
           disableTransitionOnChange
         >
           <div className="hidden md:block">

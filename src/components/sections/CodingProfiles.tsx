@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react"
 import { motion, useInView } from "framer-motion"
 import { Trophy, Code, Zap, ExternalLink } from "lucide-react"
+import { SiGeeksforgeeks } from "react-icons/si"
 import { Button } from "@/components/ui/button"
 
 function Counter({ from, to, duration = 2 }: { from: number; to: number; duration?: number }) {
@@ -31,34 +32,34 @@ function Counter({ from, to, duration = 2 }: { from: number; to: number; duratio
 
 const profiles = [
     {
-        name: "LeetCode & GFG",
+        name: "LeetCode",
         icon: <Code className="w-6 h-6" />,
         stats: [
+            { label: "Title", value: "Knight", suffix: "" },
             { label: "Problems Solved", value: 500, suffix: "+" },
-            { label: "Consistency", value: "Daily", suffix: "" },
         ],
         color: "text-yellow-500",
         link: "https://leetcode.com/u/klu2300032739/"
     },
     {
-        name: "CodeChef",
-        icon: <Trophy className="w-6 h-6" />,
+        name: "GeeksforGeeks",
+        icon: <SiGeeksforgeeks className="w-6 h-6" />,
         stats: [
-            { label: "Max Rating", value: 3, suffix: " Star" },
-            { label: "Contest Rank", value: "Global 500", suffix: "" },
+            { label: "Problems Solved", value: 150, suffix: "+" },
+            { label: "Focus", value: "Data Structures", suffix: "" },
+        ],
+        color: "text-green-500",
+        link: "https://www.geeksforgeeks.org/profile/singhroh7dpy"
+    },
+    {
+        name: "CodeChef",
+        icon: <Zap className="w-6 h-6" />,
+        stats: [
+            { label: "Rating", value: 5, suffix: " ★" },
+            { label: "Problems Solved", value: 200, suffix: "+" },
         ],
         color: "text-orange-500",
         link: "https://www.codechef.com/users/kl2300032739"
-    },
-    {
-        name: "Hackathons",
-        icon: <Zap className="w-6 h-6" />,
-        stats: [
-            { label: "SuperHack 2025", value: "Semi-Finalist", suffix: "" },
-            { label: "Focus", value: "Backend Scalability", suffix: "" },
-        ],
-        color: "text-green-500",
-        link: "#"
     }
 ]
 
@@ -72,7 +73,7 @@ export function CodingProfiles() {
                     viewport={{ once: true }}
                     className="text-center mb-12"
                 >
-                    <h2 className="text-3xl font-bold mb-4">Problem Solving & DSA</h2>
+                    <h2 className="text-4xl md:text-5xl font-sans font-bold tracking-tight mb-4 text-foreground">Problem Solving & DSA</h2>
                     <p className="text-muted-foreground">
                         Consistent practice across major coding platforms.
                     </p>
@@ -86,7 +87,7 @@ export function CodingProfiles() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="glass-card p-6 rounded-xl flex flex-col justify-between"
+                            className="glass-card p-6 rounded-3xl apple-shadow flex flex-col justify-between"
                         >
                             <div className="flex justify-between items-start mb-6">
                                 <div className={`p-3 rounded-lg bg-background shadow-sm ${profile.color}`}>
@@ -99,7 +100,7 @@ export function CodingProfiles() {
                                 </Button>
                             </div>
 
-                            <h3 className="text-xl font-bold mb-4">{profile.name}</h3>
+                            <h3 className="text-2xl font-sans font-semibold tracking-tight mb-4">{profile.name}</h3>
 
                             <div className="space-y-4 mb-6">
                                 {profile.stats.map((stat, idx) => (
@@ -113,12 +114,7 @@ export function CodingProfiles() {
                                 ))}
                             </div>
 
-                            {/* Fake Mini Graph visual */}
-                            <div className="flex gap-1 items-end h-8 mt-auto opacity-50">
-                                {[40, 70, 50, 90, 60, 80, 45].map((h, k) => (
-                                    <div key={k} style={{ height: `${h}%` }} className={`flex-1 rounded-t-sm ${profile.color.replace('text-', 'bg-')}`} />
-                                ))}
-                            </div>
+
                         </motion.div>
                     ))}
                 </div>

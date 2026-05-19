@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* Font variables */
+@theme {
+  --font-sans: var(--font-geist), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -24,67 +30,69 @@
 
 @layer base {
   :root {
-    /* Light Mode Palette */
-    --background: #F9FAFB;
-    --foreground: #111827;
+    /* ── Apple Light Theme ── */
+    --background:        #F5F5F7;   /* Apple classic light gray */
+    --foreground:        #1D1D1F;   /* Very dark gray */
 
-    --card: #FFFFFF;
-    --card-foreground: #111827;
+    --card:              #FFFFFF;
+    --card-foreground:   #1D1D1F;
 
-    --popover: #FFFFFF;
-    --popover-foreground: #111827;
+    --popover:           #FFFFFF;
+    --popover-foreground: #1D1D1F;
 
-    --primary: #2563EB;
+    /* Accent: Apple Blue */
+    --primary:           #0071E3;   
     --primary-foreground: #FFFFFF;
 
-    --secondary: #F3F4F6;
-    --secondary-foreground: #111827;
+    --secondary:         #E5E5EA;
+    --secondary-foreground: #1D1D1F;
 
-    --muted: #F3F4F6;
-    --muted-foreground: #4B5563;
+    --muted:             #E5E5EA;
+    --muted-foreground:  #86868B;
 
-    --accent: #F3F4F6;
-    --accent-foreground: #2563EB;
+    --accent:            #E5E5EA;
+    --accent-foreground: #0071E3;
 
-    --destructive: #ef4444;
+    --destructive:       #FF3B30;
     --destructive-foreground: #FFFFFF;
 
-    --border: #E5E7EB;
-    --input: #E5E7EB;
-    --ring: #2563EB;
+    --border:            #D2D2D7;   
+    --input:             #D2D2D7;
+    --ring:              #0071E3;
 
-    --radius: 0.5rem;
+    --radius: 1rem; /* Softer rounded corners */
   }
 
   .dark {
-    /* Same as root to ensure consistency */
-    --background: #0F172A;
-    --foreground: #E5E7EB;
+    /* ── Apple Dark Theme ── */
+    --background:        #000000;   /* Pure black */
+    --foreground:        #F5F5F7;   /* Off-white */
 
-    --card: #0F172A;
-    --card-foreground: #E5E7EB;
+    --card:              #1C1C1E;   /* Dark gray surface */
+    --card-foreground:   #F5F5F7;
 
-    --popover: #0F172A;
-    --popover-foreground: #E5E7EB;
+    --popover:           #1C1C1E;
+    --popover-foreground: #F5F5F7;
 
-    --primary: #38BDF8;
-    --primary-foreground: #0F172A;
+    /* Accent: Apple Blue */
+    --primary:           #0A84FF;   
+    --primary-foreground: #FFFFFF;
 
-    --secondary: #1E293B;
-    --secondary-foreground: #E5E7EB;
+    --secondary:         #2C2C2E;
+    --secondary-foreground: #F5F5F7;
 
-    --muted: #1E293B;
-    --muted-foreground: #94A3B8;
+    --muted:             #2C2C2E;
+    --muted-foreground:  #86868B;
 
-    --accent: #1E293B;
-    --accent-foreground: #38BDF8;
+    --accent:            #2C2C2E;
+    --accent-foreground: #0A84FF;
 
-    --destructive: #ef4444;
-    --destructive-foreground: #E5E7EB;
+    --destructive:       #FF453A;
+    --destructive-foreground: #FFFFFF;
 
-    --border: #1E293B;
-    --input: #1E293B;
-    --ring: #38BDF8;
+    --border:            #38383A;
+    --input:             #38383A;
+    --ring:              #0A84FF;
   }
 
   * {
@@ -92,7 +100,12 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    @apply bg-background text-foreground antialiased;
+    selection-color: rgba(0, 113, 227, 0.3);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans tracking-tight;
   }
 
   html {
@@ -102,12 +115,23 @@
 
 @layer utilities {
   .glass {
-    @apply bg-background/80 backdrop-blur-sm border border-border shadow-sm;
+    @apply bg-card/60 backdrop-blur-2xl border border-white/20 dark:border-white/5 shadow-sm;
   }
 
   .glass-card {
-    @apply bg-background border border-border shadow-sm transition-all duration-300 hover:border-primary/50 hover:shadow-md;
+    @apply bg-card/50 backdrop-blur-xl border border-border/50 transition-all duration-300 hover:border-border;
   }
 
-  /* Removed text-gradient to enforce clean professional look */
+  /* Extremely soft Apple-style shadow */
+  .apple-shadow {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  }
+  .dark .apple-shadow {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+  }
+
+  /* Gradient text utility (Optional, pure primary looks cleaner for Apple) */
+  .text-gradient {
+    @apply text-primary;
+  }
 }
