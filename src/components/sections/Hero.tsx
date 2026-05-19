@@ -144,9 +144,9 @@ export function Hero() {
                         initial={{ opacity: 0, scale: 0.96 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                        className="relative hidden lg:flex justify-center items-center w-full -mt-16"
+                        className="relative flex justify-center items-center w-full mt-8 lg:-mt-16 order-first lg:order-last mb-8 lg:mb-0"
                     >
-                        <div className="relative w-80 h-80 lg:w-[400px] lg:h-[400px] xl:w-[480px] xl:h-[480px] overflow-hidden rounded-full border border-border/40 apple-shadow z-10">
+                        <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-[400px] lg:h-[400px] xl:w-[480px] xl:h-[480px] overflow-hidden rounded-full border border-border/40 apple-shadow z-10 flex-shrink-0">
                             <Image
                                 src="/profile.jpeg"
                                 alt="Rohit Singh"
