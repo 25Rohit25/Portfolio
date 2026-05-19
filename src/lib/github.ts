@@ -9,6 +9,14 @@ export interface GithubProject {
     };
 }
 
+interface GithubRepo {
+    name: string;
+    description: string | null;
+    topics?: string[];
+    homepage: string | null;
+    html_url: string;
+}
+
 export async function getPinnedRepos(username: string): Promise<GithubProject[]> {
     try {
         // ── Step 1: scrape pinned repo names from the profile page ──────────
@@ -45,7 +53,7 @@ export async function getPinnedRepos(username: string): Promise<GithubProject[]>
         );
         if (!reposRes.ok) throw new Error("Failed to fetch GitHub repositories");
 
-        const allRepos: any[] = await reposRes.json();
+        const allRepos: GithubRepo[] = await reposRes.json();
 
         // ── Step 3: match & format ───────────────────────────────────────────
         const pinnedProjects: GithubProject[] = pinnedRepoNames
