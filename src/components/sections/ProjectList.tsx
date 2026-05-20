@@ -61,7 +61,7 @@ function ProjectCard({ project, index }: { project: GithubProject; index: number
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.55, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="group relative rounded-2xl border border-border bg-card overflow-hidden hover:border-primary/30 transition-all duration-500 hover:shadow-[0_0_40px_-12px_rgb(167_139_250_/_0.25)]"
+            className="group relative rounded-2xl border border-border bg-card overflow-hidden hover:border-primary/50 hover:-translate-y-2 transition-all duration-500 hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.2)] dark:hover:shadow-[0_20px_40px_-12px_rgba(167,139,250,0.15)]"
         >
             {/* Visual Banner */}
             <div className="relative h-52 overflow-hidden">

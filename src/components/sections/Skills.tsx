@@ -108,7 +108,7 @@ export function Skills() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.07, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                            className={`group relative rounded-3xl border bg-gradient-to-br ${cat.color} ${cat.accent} p-6 apple-shadow hover:scale-[1.02] transition-all duration-300`}
+                            className={`group relative rounded-3xl border bg-gradient-to-br ${cat.color} ${cat.accent} p-6 apple-shadow hover:-translate-y-2 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] dark:hover:shadow-[0_8px_30px_rgb(255,255,255,0.05)] hover:border-primary/40 transition-all duration-300 ease-out`}
                         >
                             {/* Category label */}
                             <p className="text-[11px] font-bold tracking-[0.15em] uppercase text-muted-foreground mb-4">
@@ -124,7 +124,7 @@ export function Skills() {
                                         title={skill.name}
                                     >
                                         {/* eslint-disable-next-line @next/next/no-img-element */}
-                                        <div className="w-10 h-10 rounded-lg bg-background/60 border border-border/40 flex items-center justify-center p-2 group-hover/item:border-primary/30 group-hover/item:bg-background/80 transition-all">
+                                        <div className="w-10 h-10 rounded-lg bg-background/60 border border-border/40 flex items-center justify-center p-2 hover:scale-110 hover:-translate-y-1 hover:shadow-md group-hover/item:border-primary/50 group-hover/item:bg-background/80 transition-all duration-300">
                                             <img
                                                 src={skill.icon}
                                                 alt={skill.name}

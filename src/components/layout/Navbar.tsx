@@ -51,7 +51,7 @@ export function Navbar() {
                                 <Link
                                     key={item.name}
                                     href={item.href}
-                                    className="text-muted-foreground hover:text-foreground hover:bg-accent/50 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                                    className="relative text-muted-foreground hover:text-foreground px-3 py-2 text-sm font-medium transition-colors after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:bg-primary after:transition-all after:duration-300 hover:after:w-4/5"
                                 >
                                     {item.name}
                                 </Link>
